@@ -26,6 +26,7 @@ public class StringDeduplicationParserTest {
     Path path = Paths.get("src", "test", "resources", "middleware.log");
     ParseResult result = this.parser.parse(path, StandardCharsets.US_ASCII);
     assertNotNull(result);
+    System.out.printf("total memory saved %d in %d deduplications%n", result.getSaved(), result.getCount());
   }
 
   @Test
@@ -59,6 +60,11 @@ public class StringDeduplicationParserTest {
     assertNull(StringDeduplicationParser.betweenAnd("20.5K), avg 17.5%, 0.0018690 secs", '(', ')'));
   }
 
-
+  @Test
+  public void parseMemory() {
+    assertEquals((long) (20.5d * 1024), StringDeduplicationParser.parseMemory("20.5K"));
+    assertEquals(4808, StringDeduplicationParser.parseMemory("4808.0B"));
+    assertEquals(11 * 1024 * 1024, StringDeduplicationParser.parseMemory("11.0M"));
+  }
 
 }
