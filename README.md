@@ -18,3 +18,11 @@ the output will look something like this
 total memory saved 162.1M in 148 deduplications
 ```
 
+To get the logs you to to run at least with
+
+```
+-XX:+UseStringDeduplication -XX:+UseG1GC -XX:+PrintGC -XX:+PrintGCDetail 
+```
+
+as string deduplication is only available with G1.
+
