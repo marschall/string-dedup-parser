@@ -26,7 +26,7 @@ public class StringDeduplicationParserTest {
     Path path = Paths.get("src", "test", "resources", "middleware.log");
     ParseResult result = this.parser.parse(path, StandardCharsets.US_ASCII);
     assertNotNull(result);
-    System.out.printf("total memory saved %d in %d deduplications%n", result.getSaved(), result.getCount());
+    System.out.println(result);
   }
 
   @Test
