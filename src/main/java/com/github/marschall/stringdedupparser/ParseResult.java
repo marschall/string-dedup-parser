@@ -2,6 +2,9 @@ package com.github.marschall.stringdedupparser;
 
 import java.text.DecimalFormat;
 
+/**
+ * The result of parsing a string deduplication log.
+ */
 public final class ParseResult {
 
   private final long saved;
@@ -12,10 +15,20 @@ public final class ParseResult {
     this.count = count;
   }
 
+  /**
+   * Returns the total memory saved by string deduplication in bytes.
+   *
+   * @return the total memory saved
+   */
   public long getSaved() {
     return saved;
   }
 
+  /**
+   * Returns the number of string deduplications cycles.
+   *
+   * @return the number of string deduplications
+   */
   public int getCount() {
     return count;
   }

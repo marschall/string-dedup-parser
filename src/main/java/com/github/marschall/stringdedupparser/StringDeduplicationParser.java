@@ -10,6 +10,9 @@ import java.util.logging.Logger;
 import com.github.marschall.lineparser.Line;
 import com.github.marschall.lineparser.LineParser;
 
+/**
+ * Parses a string deduplication log.
+ */
 public final class StringDeduplicationParser {
 
   private static final Logger LOG = Logger.getLogger(MethodHandles.lookup().lookupClass().getName());
