@@ -1,4 +1,4 @@
-String Deduplication Log Parser
+String Deduplication Log Parser [![Build Status](https://travis-ci.org/marschall/string-dedup-parser.svg?branch=master)](https://travis-ci.org/marschall/string-dedup-parser)
 ===============================
 
 A parser for HotSpot string deduplication logs.
