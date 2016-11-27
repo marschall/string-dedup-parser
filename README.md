@@ -1,4 +1,4 @@
-String Deduplication Log Parser [![Build Status](https://travis-ci.org/marschall/string-dedup-parser.svg?branch=master)](https://travis-ci.org/marschall/string-dedup-parser)
+String Deduplication Log Parser [![Build Status](https://travis-ci.org/marschall/string-dedup-parser.svg?branch=master)](https://travis-ci.org/marschall/string-dedup-parser) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.marschall/string-dedup-parser/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.marschall/string-dedup-parser)
 ===============================
 
 A parser for HotSpot string deduplication logs.
