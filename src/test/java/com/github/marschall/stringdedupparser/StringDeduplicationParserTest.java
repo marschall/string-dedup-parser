@@ -26,7 +26,17 @@ public class StringDeduplicationParserTest {
     Path path = Paths.get("src", "test", "resources", "middleware.log");
     ParseResult result = this.parser.parse(path, StandardCharsets.US_ASCII);
     assertNotNull(result);
-    System.out.println(result);
+    assertEquals(148L, result.getCount());
+    assertEquals(169929993L, result.getSaved());
+  }
+
+  @Test
+  public void parseMiddlewareJdk9Log() throws IOException {
+    Path path = Paths.get("src", "test", "resources", "middleware-jdk9.log");
+    ParseResult result = this.parser.parse(path, StandardCharsets.US_ASCII);
+    assertNotNull(result);
+    assertEquals(19L, result.getCount());
+    assertEquals(981047L, result.getSaved());
   }
 
   @Test

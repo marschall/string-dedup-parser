@@ -1,0 +1,441 @@
+[0.012s][info][gc,heap] Heap region size: 1M
+[0.014s][info][gc     ] Using G1
+[0.014s][info][gc,heap,coops] Heap address: 0x00000007a0000000, size: 512 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+[0.898s][info][gc,start     ] GC(0) Pause Young (G1 Evacuation Pause)
+[0.898s][info][gc,task      ] GC(0) Using 8 workers of 8 for evacuation
+[0.907s][info][gc,phases    ] GC(0)   Evacuate Collection Set: 5.3ms
+[0.907s][info][gc,phases    ] GC(0)   Code Roots: 0.1ms
+[0.907s][info][gc,phases    ] GC(0)   String Dedup Fixup: 0.8ms
+[0.907s][info][gc,phases    ] GC(0)   Clear Card Table: 0.1ms
+[0.907s][info][gc,phases    ] GC(0)   Expand Heap After Collection: 0.0ms
+[0.907s][info][gc,phases    ] GC(0)   Free Collection Set: 0.2ms
+[0.907s][info][gc,phases    ] GC(0)   Merge Per-Thread State: 0.0ms
+[0.907s][info][gc,phases    ] GC(0)   Other: 2.5ms
+[0.907s][info][gc,heap      ] GC(0) Eden regions: 24->0(23)
+[0.907s][info][gc,heap      ] GC(0) Survivor regions: 0->3(3)
+[0.907s][info][gc,heap      ] GC(0) Old regions: 0->4
+[0.907s][info][gc,heap      ] GC(0) Humongous regions: 0->0
+[0.907s][info][gc,metaspace ] GC(0) Metaspace: 12013K->12013K(1060864K)
+[0.907s][info][gc           ] GC(0) Pause Young (G1 Evacuation Pause) 24M->6M(64M) 8.974ms
+[0.907s][info][gc,cpu       ] GC(0) User=0.03s Sys=0.01s Real=0.01s
+[0.907s][info][gc,stringdedup] Concurrent String Deduplication (0.907s)
+[0.908s][info][gc,stringdedup] Concurrent String Deduplication 127.1K->88.6K(38.5K) avg 30.3% (0.907s, 0.908s) 0.990ms
+[11.623s][info][gc,start      ] GC(1) Pause Young (G1 Evacuation Pause)
+[11.623s][info][gc,task       ] GC(1) Using 8 workers of 8 for evacuation
+[11.632s][info][gc,phases     ] GC(1)   Evacuate Collection Set: 5.6ms
+[11.632s][info][gc,phases     ] GC(1)   Code Roots: 0.1ms
+[11.632s][info][gc,phases     ] GC(1)   String Dedup Fixup: 0.5ms
+[11.632s][info][gc,phases     ] GC(1)   Clear Card Table: 0.0ms
+[11.632s][info][gc,phases     ] GC(1)   Expand Heap After Collection: 0.0ms
+[11.632s][info][gc,phases     ] GC(1)   Free Collection Set: 0.1ms
+[11.632s][info][gc,phases     ] GC(1)   Merge Per-Thread State: 0.0ms
+[11.632s][info][gc,phases     ] GC(1)   Other: 2.7ms
+[11.632s][info][gc,heap       ] GC(1) Eden regions: 18->0(20)
+[11.632s][info][gc,heap       ] GC(1) Survivor regions: 3->3(3)
+[11.632s][info][gc,heap       ] GC(1) Old regions: 4->10
+[11.632s][info][gc,heap       ] GC(1) Humongous regions: 0->0
+[11.632s][info][gc,metaspace  ] GC(1) Metaspace: 19172K->19172K(1067008K)
+[11.632s][info][gc            ] GC(1) Pause Young (G1 Evacuation Pause) 24M->12M(64M) 9.013ms
+[11.632s][info][gc,cpu        ] GC(1) User=0.04s Sys=0.00s Real=0.01s
+[11.632s][info][gc,stringdedup] Concurrent String Deduplication (11.632s)
+[11.634s][info][gc,stringdedup] Concurrent String Deduplication 116.6K->79.9K(36.8K) avg 30.9% (11.632s, 11.634s) 1.621ms
+[11.857s][info][gc,start      ] GC(2) Pause Young (G1 Evacuation Pause)
+[11.857s][info][gc,task       ] GC(2) Using 8 workers of 8 for evacuation
+[11.866s][info][gc,phases     ] GC(2)   Evacuate Collection Set: 6.6ms
+[11.866s][info][gc,phases     ] GC(2)   Code Roots: 0.0ms
+[11.866s][info][gc,phases     ] GC(2)   String Dedup Fixup: 0.3ms
+[11.866s][info][gc,phases     ] GC(2)   Clear Card Table: 0.0ms
+[11.866s][info][gc,phases     ] GC(2)   Expand Heap After Collection: 0.0ms
+[11.866s][info][gc,phases     ] GC(2)   Free Collection Set: 0.0ms
+[11.866s][info][gc,phases     ] GC(2)   Merge Per-Thread State: 0.0ms
+[11.866s][info][gc,phases     ] GC(2)   Other: 1.8ms
+[11.866s][info][gc,heap       ] GC(2) Eden regions: 20->0(19)
+[11.866s][info][gc,heap       ] GC(2) Survivor regions: 3->3(3)
+[11.866s][info][gc,heap       ] GC(2) Old regions: 10->15
+[11.866s][info][gc,heap       ] GC(2) Humongous regions: 0->0
+[11.866s][info][gc,metaspace  ] GC(2) Metaspace: 21861K->21861K(1071104K)
+[11.866s][info][gc            ] GC(2) Pause Young (G1 Evacuation Pause) 32M->17M(64M) 8.966ms
+[11.866s][info][gc,cpu        ] GC(2) User=0.05s Sys=0.00s Real=0.01s
+[11.866s][info][gc,stringdedup] Concurrent String Deduplication (11.866s)
+[11.867s][info][gc,stringdedup] Concurrent String Deduplication 152.3K->89.1K(63.2K) avg 35.0% (11.866s, 11.867s) 1.621ms
+[11.912s][info][gc,start      ] GC(3) Pause Young (G1 Evacuation Pause)
+[11.912s][info][gc,task       ] GC(3) Using 8 workers of 8 for evacuation
+[11.917s][info][gc,phases     ] GC(3)   Evacuate Collection Set: 3.9ms
+[11.917s][info][gc,phases     ] GC(3)   Code Roots: 0.0ms
+[11.918s][info][gc,phases     ] GC(3)   String Dedup Fixup: 0.3ms
+[11.918s][info][gc,phases     ] GC(3)   Clear Card Table: 0.0ms
+[11.918s][info][gc,phases     ] GC(3)   Expand Heap After Collection: 0.0ms
+[11.918s][info][gc,phases     ] GC(3)   Free Collection Set: 0.0ms
+[11.918s][info][gc,phases     ] GC(3)   Merge Per-Thread State: 0.0ms
+[11.918s][info][gc,phases     ] GC(3)   Other: 0.8ms
+[11.918s][info][gc,heap       ] GC(3) Eden regions: 19->0(18)
+[11.918s][info][gc,heap       ] GC(3) Survivor regions: 3->3(3)
+[11.918s][info][gc,heap       ] GC(3) Old regions: 15->20
+[11.918s][info][gc,heap       ] GC(3) Humongous regions: 0->0
+[11.918s][info][gc,metaspace  ] GC(3) Metaspace: 22306K->22306K(1071104K)
+[11.918s][info][gc            ] GC(3) Pause Young (G1 Evacuation Pause) 36M->22M(64M) 5.126ms
+[11.918s][info][gc,cpu        ] GC(3) User=0.03s Sys=0.00s Real=0.01s
+[11.918s][info][gc,stringdedup] Concurrent String Deduplication (11.918s)
+[11.921s][info][gc,stringdedup] Concurrent String Deduplication 126.4K->82.8K(43.5K) avg 34.8% (11.918s, 11.921s) 1.588ms
+[12.045s][info][gc,start      ] GC(4) Pause Young (G1 Evacuation Pause)
+[12.045s][info][gc,task       ] GC(4) Using 8 workers of 8 for evacuation
+[12.051s][info][gc,phases     ] GC(4)   Evacuate Collection Set: 3.7ms
+[12.051s][info][gc,phases     ] GC(4)   Code Roots: 0.0ms
+[12.051s][info][gc,phases     ] GC(4)   String Dedup Fixup: 0.2ms
+[12.051s][info][gc,phases     ] GC(4)   Clear Card Table: 0.0ms
+[12.051s][info][gc,phases     ] GC(4)   Expand Heap After Collection: 0.0ms
+[12.051s][info][gc,phases     ] GC(4)   Free Collection Set: 0.0ms
+[12.051s][info][gc,phases     ] GC(4)   Merge Per-Thread State: 0.0ms
+[12.051s][info][gc,phases     ] GC(4)   Other: 1.4ms
+[12.051s][info][gc,heap       ] GC(4) Eden regions: 18->0(16)
+[12.051s][info][gc,heap       ] GC(4) Survivor regions: 3->3(3)
+[12.051s][info][gc,heap       ] GC(4) Old regions: 20->25
+[12.051s][info][gc,heap       ] GC(4) Humongous regions: 1->1
+[12.051s][info][gc,metaspace  ] GC(4) Metaspace: 24026K->24026K(1073152K)
+[12.051s][info][gc            ] GC(4) Pause Young (G1 Evacuation Pause) 41M->28M(64M) 5.541ms
+[12.051s][info][gc,cpu        ] GC(4) User=0.03s Sys=0.00s Real=0.00s
+[12.051s][info][gc,stringdedup] Concurrent String Deduplication (12.051s)
+[12.054s][info][gc,stringdedup] Concurrent String Deduplication 128.2K->94.9K(33.3K) avg 33.1% (12.051s, 12.054s) 1.156ms
+[12.238s][info][gc,start      ] GC(5) Pause Young (G1 Evacuation Pause)
+[12.238s][info][gc,task       ] GC(5) Using 8 workers of 8 for evacuation
+[12.243s][info][gc,phases     ] GC(5)   Evacuate Collection Set: 4.1ms
+[12.243s][info][gc,phases     ] GC(5)   Code Roots: 0.0ms
+[12.243s][info][gc,phases     ] GC(5)   String Dedup Fixup: 0.3ms
+[12.243s][info][gc,phases     ] GC(5)   Clear Card Table: 0.0ms
+[12.243s][info][gc,phases     ] GC(5)   Expand Heap After Collection: 0.0ms
+[12.243s][info][gc,phases     ] GC(5)   Free Collection Set: 0.0ms
+[12.243s][info][gc,phases     ] GC(5)   Merge Per-Thread State: 0.0ms
+[12.243s][info][gc,phases     ] GC(5)   Other: 0.8ms
+[12.243s][info][gc,heap       ] GC(5) Eden regions: 16->0(15)
+[12.243s][info][gc,heap       ] GC(5) Survivor regions: 3->3(3)
+[12.243s][info][gc,heap       ] GC(5) Old regions: 25->28
+[12.243s][info][gc,heap       ] GC(5) Humongous regions: 1->0
+[12.243s][info][gc,metaspace  ] GC(5) Metaspace: 25543K->25543K(1075200K)
+[12.243s][info][gc            ] GC(5) Pause Young (G1 Evacuation Pause) 44M->29M(64M) 5.345ms
+[12.244s][info][gc,cpu        ] GC(5) User=0.03s Sys=0.00s Real=0.00s
+[12.244s][info][gc,stringdedup] Concurrent String Deduplication (12.244s)
+[12.246s][info][gc,stringdedup] Concurrent String Deduplication 139.9K->104.1K(35.8K) avg 31.8% (12.244s, 12.246s) 1.544ms
+[12.374s][info][gc,start      ] GC(6) Pause Young (G1 Evacuation Pause)
+[12.374s][info][gc,task       ] GC(6) Using 8 workers of 8 for evacuation
+[12.378s][info][gc,phases     ] GC(6)   Evacuate Collection Set: 3.0ms
+[12.378s][info][gc,phases     ] GC(6)   Code Roots: 0.0ms
+[12.378s][info][gc,phases     ] GC(6)   String Dedup Fixup: 0.2ms
+[12.378s][info][gc,phases     ] GC(6)   Clear Card Table: 0.0ms
+[12.378s][info][gc,phases     ] GC(6)   Expand Heap After Collection: 0.0ms
+[12.378s][info][gc,phases     ] GC(6)   Free Collection Set: 0.0ms
+[12.378s][info][gc,phases     ] GC(6)   Merge Per-Thread State: 0.0ms
+[12.378s][info][gc,phases     ] GC(6)   Other: 0.4ms
+[12.378s][info][gc,heap       ] GC(6) Eden regions: 15->0(16)
+[12.378s][info][gc,heap       ] GC(6) Survivor regions: 3->2(3)
+[12.378s][info][gc,heap       ] GC(6) Old regions: 28->29
+[12.378s][info][gc,heap       ] GC(6) Humongous regions: 0->0
+[12.378s][info][gc,metaspace  ] GC(6) Metaspace: 26464K->26464K(1075200K)
+[12.378s][info][gc            ] GC(6) Pause Young (G1 Evacuation Pause) 44M->29M(64M) 3.758ms
+[12.378s][info][gc,cpu        ] GC(6) User=0.03s Sys=0.01s Real=0.01s
+[12.378s][info][gc,stringdedup] Concurrent String Deduplication (12.378s)
+[12.379s][info][gc,stringdedup] Concurrent String Deduplication 29.7K->18.3K(11.4K) avg 32.0% (12.378s, 12.379s) 0.413ms
+[12.518s][info][gc,start      ] GC(7) Pause Initial Mark (G1 Evacuation Pause)
+[12.518s][info][gc,task       ] GC(7) Using 8 workers of 8 for evacuation
+[12.524s][info][gc,phases     ] GC(7)   Evacuate Collection Set: 2.8ms
+[12.524s][info][gc,phases     ] GC(7)   Code Roots: 0.0ms
+[12.524s][info][gc,phases     ] GC(7)   String Dedup Fixup: 0.4ms
+[12.524s][info][gc,phases     ] GC(7)   Clear Card Table: 0.0ms
+[12.524s][info][gc,phases     ] GC(7)   Expand Heap After Collection: 0.0ms
+[12.524s][info][gc,phases     ] GC(7)   Free Collection Set: 0.0ms
+[12.524s][info][gc,phases     ] GC(7)   Merge Per-Thread State: 0.0ms
+[12.524s][info][gc,phases     ] GC(7)   Other: 2.3ms
+[12.524s][info][gc,heap       ] GC(7) Eden regions: 16->0(14)
+[12.524s][info][gc,heap       ] GC(7) Survivor regions: 2->3(3)
+[12.524s][info][gc,heap       ] GC(7) Old regions: 29->31
+[12.524s][info][gc,heap       ] GC(7) Humongous regions: 0->0
+[12.524s][info][gc,metaspace  ] GC(7) Metaspace: 29439K->29439K(1077248K)
+[12.524s][info][gc            ] GC(7) Pause Initial Mark (G1 Evacuation Pause) 45M->33M(64M) 5.674ms
+[12.524s][info][gc,cpu        ] GC(7) User=0.03s Sys=0.01s Real=0.00s
+[12.524s][info][gc            ] GC(8) Concurrent Cycle
+[12.524s][info][gc,marking    ] GC(8) Concurrent Clear Claimed Marks
+[12.524s][info][gc,stringdedup] Concurrent String Deduplication (12.524s)
+[12.524s][info][gc,marking    ] GC(8) Concurrent Clear Claimed Marks 0.047ms
+[12.524s][info][gc,marking    ] GC(8) Concurrent Scan Root Regions
+[12.524s][info][gc,stringdedup] Concurrent String Deduplication 6136.0B->1768.0B(4368.0B) avg 32.3% (12.524s, 12.524s) 0.058ms
+[12.526s][info][gc,marking    ] GC(8) Concurrent Scan Root Regions 2.298ms
+[12.526s][info][gc,marking    ] GC(8) Concurrent Mark (12.526s)
+[12.526s][info][gc,marking    ] GC(8) Concurrent Mark From Roots
+[12.526s][info][gc,task       ] GC(8) Using 2 workers of 2 for marking
+[12.542s][info][gc,marking    ] GC(8) Concurrent Mark From Roots 15.742ms
+[12.542s][info][gc,marking    ] GC(8) Concurrent Mark (12.526s, 12.542s) 15.783ms
+[12.542s][info][gc,start      ] GC(8) Pause Remark
+[12.545s][info][gc,stringtable] GC(8) Cleaned string and symbol table, strings: 15713 processed, 18 removed, symbols: 87832 processed, 51 removed
+[12.545s][info][gc            ] GC(8) Pause Remark 35M->35M(64M) 3.061ms
+[12.545s][info][gc,cpu        ] GC(8) User=0.02s Sys=0.00s Real=0.01s
+[12.545s][info][gc,marking    ] GC(8) Concurrent Create Live Data
+[12.549s][info][gc,marking    ] GC(8) Concurrent Create Live Data 3.855ms
+[12.550s][info][gc,start      ] GC(8) Pause Cleanup
+[12.550s][info][gc            ] GC(8) Pause Cleanup 35M->32M(64M) 0.242ms
+[12.550s][info][gc,cpu        ] GC(8) User=0.00s Sys=0.00s Real=0.00s
+[12.550s][info][gc,marking    ] GC(8) Concurrent Complete Cleanup
+[12.550s][info][gc,marking    ] GC(8) Concurrent Complete Cleanup 0.019ms
+[12.550s][info][gc,marking    ] GC(8) Concurrent Cleanup for Next Mark
+[12.551s][info][gc,marking    ] GC(8) Concurrent Cleanup for Next Mark 0.661ms
+[12.551s][info][gc            ] GC(8) Concurrent Cycle 26.598ms
+[12.748s][info][gc,start      ] GC(9) Pause Young (G1 Evacuation Pause)
+[12.748s][info][gc,task       ] GC(9) Using 8 workers of 8 for evacuation
+[12.754s][info][gc,phases     ] GC(9)   Evacuate Collection Set: 4.5ms
+[12.754s][info][gc,phases     ] GC(9)   Code Roots: 0.0ms
+[12.754s][info][gc,phases     ] GC(9)   String Dedup Fixup: 0.3ms
+[12.754s][info][gc,phases     ] GC(9)   Clear Card Table: 0.0ms
+[12.754s][info][gc,phases     ] GC(9)   Expand Heap After Collection: 0.0ms
+[12.754s][info][gc,phases     ] GC(9)   Free Collection Set: 0.0ms
+[12.754s][info][gc,phases     ] GC(9)   Merge Per-Thread State: 0.0ms
+[12.754s][info][gc,phases     ] GC(9)   Other: 1.2ms
+[12.754s][info][gc,heap       ] GC(9) Eden regions: 14->0(1)
+[12.754s][info][gc,heap       ] GC(9) Survivor regions: 3->3(3)
+[12.754s][info][gc,heap       ] GC(9) Old regions: 28->32
+[12.754s][info][gc,heap       ] GC(9) Humongous regions: 0->0
+[12.754s][info][gc,metaspace  ] GC(9) Metaspace: 32009K->32009K(1081344K)
+[12.754s][info][gc            ] GC(9) Pause Young (G1 Evacuation Pause) 44M->34M(64M) 6.212ms
+[12.754s][info][gc,cpu        ] GC(9) User=0.04s Sys=0.01s Real=0.00s
+[12.754s][info][gc,stringdedup] Concurrent String Deduplication (12.754s)
+[12.756s][info][gc,stringdedup] Concurrent String Deduplication 141.8K->116.5K(25.2K) avg 30.2% (12.754s, 12.756s) 1.598ms
+[12.782s][info][gc,start      ] GC(10) Pause Mixed (G1 Evacuation Pause)
+[12.782s][info][gc,task       ] GC(10) Using 8 workers of 8 for evacuation
+[12.788s][info][gc,phases     ] GC(10)   Evacuate Collection Set: 5.8ms
+[12.788s][info][gc,phases     ] GC(10)   Code Roots: 0.0ms
+[12.788s][info][gc,phases     ] GC(10)   String Dedup Fixup: 0.3ms
+[12.788s][info][gc,phases     ] GC(10)   Clear Card Table: 0.0ms
+[12.788s][info][gc,phases     ] GC(10)   Expand Heap After Collection: 0.0ms
+[12.788s][info][gc,phases     ] GC(10)   Free Collection Set: 0.1ms
+[12.788s][info][gc,phases     ] GC(10)   Merge Per-Thread State: 0.0ms
+[12.788s][info][gc,phases     ] GC(10)   Other: 0.4ms
+[12.788s][info][gc,heap       ] GC(10) Eden regions: 1->0(16)
+[12.788s][info][gc,heap       ] GC(10) Survivor regions: 3->1(1)
+[12.788s][info][gc,heap       ] GC(10) Old regions: 32->29
+[12.788s][info][gc,heap       ] GC(10) Humongous regions: 0->0
+[12.788s][info][gc,metaspace  ] GC(10) Metaspace: 32432K->32432K(1081344K)
+[12.788s][info][gc            ] GC(10) Pause Mixed (G1 Evacuation Pause) 35M->28M(64M) 6.752ms
+[12.788s][info][gc,cpu        ] GC(10) User=0.05s Sys=0.01s Real=0.01s
+[12.788s][info][gc,stringdedup] Concurrent String Deduplication (12.788s)
+[12.789s][info][gc,stringdedup] Concurrent String Deduplication 71.5K->47.8K(23.7K) avg 30.4% (12.788s, 12.789s) 0.540ms
+[12.968s][info][gc,start      ] GC(11) Pause Initial Mark (G1 Evacuation Pause)
+[12.968s][info][gc,task       ] GC(11) Using 8 workers of 8 for evacuation
+[12.975s][info][gc,phases     ] GC(11)   Evacuate Collection Set: 4.4ms
+[12.975s][info][gc,phases     ] GC(11)   Code Roots: 0.0ms
+[12.975s][info][gc,phases     ] GC(11)   String Dedup Fixup: 0.5ms
+[12.975s][info][gc,phases     ] GC(11)   Clear Card Table: 0.0ms
+[12.975s][info][gc,phases     ] GC(11)   Expand Heap After Collection: 0.0ms
+[12.975s][info][gc,phases     ] GC(11)   Free Collection Set: 0.0ms
+[12.975s][info][gc,phases     ] GC(11)   Merge Per-Thread State: 0.0ms
+[12.975s][info][gc,phases     ] GC(11)   Other: 1.7ms
+[12.975s][info][gc,heap       ] GC(11) Eden regions: 16->0(13)
+[12.975s][info][gc,heap       ] GC(11) Survivor regions: 1->3(3)
+[12.975s][info][gc,heap       ] GC(11) Old regions: 29->31
+[12.975s][info][gc,heap       ] GC(11) Humongous regions: 0->0
+[12.975s][info][gc,metaspace  ] GC(11) Metaspace: 36495K->36495K(1085440K)
+[12.975s][info][gc            ] GC(11) Pause Initial Mark (G1 Evacuation Pause) 44M->33M(64M) 6.723ms
+[12.975s][info][gc,cpu        ] GC(11) User=0.04s Sys=0.00s Real=0.01s
+[12.975s][info][gc            ] GC(12) Concurrent Cycle
+[12.975s][info][gc,marking    ] GC(12) Concurrent Clear Claimed Marks
+[12.975s][info][gc,stringdedup] Concurrent String Deduplication (12.975s)
+[12.975s][info][gc,marking    ] GC(12) Concurrent Clear Claimed Marks 0.046ms
+[12.975s][info][gc,marking    ] GC(12) Concurrent Scan Root Regions
+[12.975s][info][gc,stringdedup] Concurrent String Deduplication 2248.0B->1512.0B(736.0B) avg 30.4% (12.975s, 12.975s) 0.034ms
+[12.979s][info][gc,marking    ] GC(12) Concurrent Scan Root Regions 3.676ms
+[12.979s][info][gc,marking    ] GC(12) Concurrent Mark (12.979s)
+[12.979s][info][gc,marking    ] GC(12) Concurrent Mark From Roots
+[12.979s][info][gc,task       ] GC(12) Using 2 workers of 2 for marking
+[13.006s][info][gc,marking    ] GC(12) Concurrent Mark From Roots 27.104ms
+[13.006s][info][gc,marking    ] GC(12) Concurrent Mark (12.979s, 13.006s) 27.154ms
+[13.007s][info][gc,start      ] GC(12) Pause Remark
+[13.011s][info][gc,stringtable] GC(12) Cleaned string and symbol table, strings: 19286 processed, 19 removed, symbols: 109148 processed, 85 removed
+[13.011s][info][gc            ] GC(12) Pause Remark 36M->36M(64M) 4.878ms
+[13.011s][info][gc,cpu        ] GC(12) User=0.04s Sys=0.00s Real=0.00s
+[13.012s][info][gc,marking    ] GC(12) Concurrent Create Live Data
+[13.020s][info][gc,marking    ] GC(12) Concurrent Create Live Data 8.088ms
+[13.020s][info][gc,start      ] GC(12) Pause Cleanup
+[13.020s][info][gc            ] GC(12) Pause Cleanup 37M->36M(64M) 0.194ms
+[13.020s][info][gc,cpu        ] GC(12) User=0.00s Sys=0.00s Real=0.00s
+[13.020s][info][gc,marking    ] GC(12) Concurrent Complete Cleanup
+[13.020s][info][gc,marking    ] GC(12) Concurrent Complete Cleanup 0.020ms
+[13.020s][info][gc,marking    ] GC(12) Concurrent Cleanup for Next Mark
+[13.021s][info][gc,marking    ] GC(12) Concurrent Cleanup for Next Mark 0.608ms
+[13.021s][info][gc            ] GC(12) Concurrent Cycle 46.262ms
+[13.101s][info][gc,start      ] GC(13) Pause Young (G1 Evacuation Pause)
+[13.101s][info][gc,task       ] GC(13) Using 8 workers of 8 for evacuation
+[13.106s][info][gc,phases     ] GC(13)   Evacuate Collection Set: 3.2ms
+[13.106s][info][gc,phases     ] GC(13)   Code Roots: 0.0ms
+[13.106s][info][gc,phases     ] GC(13)   String Dedup Fixup: 0.4ms
+[13.106s][info][gc,phases     ] GC(13)   Clear Card Table: 0.0ms
+[13.106s][info][gc,phases     ] GC(13)   Expand Heap After Collection: 0.0ms
+[13.106s][info][gc,phases     ] GC(13)   Free Collection Set: 0.0ms
+[13.106s][info][gc,phases     ] GC(13)   Merge Per-Thread State: 0.0ms
+[13.106s][info][gc,phases     ] GC(13)   Other: 1.4ms
+[13.106s][info][gc,heap       ] GC(13) Eden regions: 13->0(1)
+[13.106s][info][gc,heap       ] GC(13) Survivor regions: 3->2(2)
+[13.106s][info][gc,heap       ] GC(13) Old regions: 30->35
+[13.106s][info][gc,heap       ] GC(13) Humongous regions: 0->0
+[13.106s][info][gc,metaspace  ] GC(13) Metaspace: 40119K->40119K(1087488K)
+[13.106s][info][gc            ] GC(13) Pause Young (G1 Evacuation Pause) 45M->37M(64M) 5.182ms
+[13.106s][info][gc,cpu        ] GC(13) User=0.02s Sys=0.01s Real=0.01s
+[13.106s][info][gc,stringdedup] Concurrent String Deduplication (13.106s)
+[13.108s][info][gc,stringdedup] Concurrent String Deduplication 116.2K->80.8K(35.4K) avg 30.4% (13.106s, 13.108s) 2.090ms
+[13.120s][info][gc,start      ] GC(14) Pause Mixed (G1 Evacuation Pause)
+[13.120s][info][gc,task       ] GC(14) Using 8 workers of 8 for evacuation
+[13.125s][info][gc,phases     ] GC(14)   Evacuate Collection Set: 4.6ms
+[13.126s][info][gc,phases     ] GC(14)   Code Roots: 0.0ms
+[13.126s][info][gc,phases     ] GC(14)   String Dedup Fixup: 0.4ms
+[13.126s][info][gc,phases     ] GC(14)   Clear Card Table: 0.0ms
+[13.126s][info][gc,phases     ] GC(14)   Expand Heap After Collection: 0.0ms
+[13.126s][info][gc,phases     ] GC(14)   Free Collection Set: 0.0ms
+[13.126s][info][gc,phases     ] GC(14)   Merge Per-Thread State: 0.0ms
+[13.126s][info][gc,phases     ] GC(14)   Other: 0.3ms
+[13.126s][info][gc,heap       ] GC(14) Eden regions: 1->0(12)
+[13.126s][info][gc,heap       ] GC(14) Survivor regions: 2->1(1)
+[13.126s][info][gc,heap       ] GC(14) Old regions: 35->34
+[13.126s][info][gc,heap       ] GC(14) Humongous regions: 0->0
+[13.126s][info][gc,metaspace  ] GC(14) Metaspace: 40392K->40392K(1089536K)
+[13.126s][info][gc            ] GC(14) Pause Mixed (G1 Evacuation Pause) 38M->34M(64M) 5.597ms
+[13.126s][info][gc,cpu        ] GC(14) User=0.04s Sys=0.00s Real=0.01s
+[13.126s][info][gc,stringdedup] Concurrent String Deduplication (13.126s)
+[13.130s][info][gc,stringdedup] Concurrent String Deduplication 227.4K->139.3K(88.0K) avg 31.7% (13.126s, 13.130s) 3.000ms
+[13.326s][info][gc,start      ] GC(15) Pause Initial Mark (G1 Evacuation Pause)
+[13.326s][info][gc,task       ] GC(15) Using 8 workers of 8 for evacuation
+[13.332s][info][gc,phases     ] GC(15)   Evacuate Collection Set: 5.0ms
+[13.332s][info][gc,phases     ] GC(15)   Code Roots: 0.0ms
+[13.332s][info][gc,phases     ] GC(15)   String Dedup Fixup: 0.6ms
+[13.332s][info][gc,phases     ] GC(15)   Clear Card Table: 0.0ms
+[13.332s][info][gc,phases     ] GC(15)   Expand Heap After Collection: 0.0ms
+[13.332s][info][gc,phases     ] GC(15)   Free Collection Set: 0.0ms
+[13.333s][info][gc,phases     ] GC(15)   Merge Per-Thread State: 0.0ms
+[13.333s][info][gc,phases     ] GC(15)   Other: 1.0ms
+[13.333s][info][gc,heap       ] GC(15) Eden regions: 12->0(10)
+[13.333s][info][gc,heap       ] GC(15) Survivor regions: 1->2(2)
+[13.333s][info][gc,heap       ] GC(15) Old regions: 34->36
+[13.333s][info][gc,heap       ] GC(15) Humongous regions: 0->0
+[13.333s][info][gc,metaspace  ] GC(15) Metaspace: 43612K->43612K(1091584K)
+[13.333s][info][gc            ] GC(15) Pause Initial Mark (G1 Evacuation Pause) 46M->37M(64M) 6.771ms
+[13.333s][info][gc,cpu        ] GC(15) User=0.05s Sys=0.00s Real=0.00s
+[13.333s][info][gc            ] GC(16) Concurrent Cycle
+[13.333s][info][gc,marking    ] GC(16) Concurrent Clear Claimed Marks
+[13.333s][info][gc,stringdedup] Concurrent String Deduplication (13.333s)
+[13.333s][info][gc,stringdedup] Concurrent String Deduplication 344.0B->0.0B(344.0B) avg 31.8% (13.333s, 13.333s) 0.022ms
+[13.333s][info][gc,marking    ] GC(16) Concurrent Clear Claimed Marks 0.057ms
+[13.333s][info][gc,marking    ] GC(16) Concurrent Scan Root Regions
+[13.334s][info][gc,marking    ] GC(16) Concurrent Scan Root Regions 1.718ms
+[13.334s][info][gc,marking    ] GC(16) Concurrent Mark (13.334s)
+[13.334s][info][gc,marking    ] GC(16) Concurrent Mark From Roots
+[13.334s][info][gc,task       ] GC(16) Using 2 workers of 2 for marking
+[13.360s][info][gc,marking    ] GC(16) Concurrent Mark From Roots 25.566ms
+[13.360s][info][gc,marking    ] GC(16) Concurrent Mark (13.334s, 13.360s) 25.614ms
+[13.361s][info][gc,start      ] GC(16) Pause Remark
+[13.366s][info][gc,stringtable] GC(16) Cleaned string and symbol table, strings: 23597 processed, 5 removed, symbols: 131334 processed, 72 removed
+[13.367s][info][gc            ] GC(16) Pause Remark 38M->38M(64M) 6.467ms
+[13.367s][info][gc,cpu        ] GC(16) User=0.03s Sys=0.00s Real=0.01s
+[13.367s][info][gc,marking    ] GC(16) Concurrent Create Live Data
+[13.374s][info][gc,marking    ] GC(16) Concurrent Create Live Data 6.812ms
+[13.377s][info][gc,start      ] GC(16) Pause Cleanup
+[13.377s][info][gc            ] GC(16) Pause Cleanup 39M->36M(64M) 0.248ms
+[13.377s][info][gc,cpu        ] GC(16) User=0.00s Sys=0.00s Real=0.00s
+[13.377s][info][gc,marking    ] GC(16) Concurrent Complete Cleanup
+[13.377s][info][gc,marking    ] GC(16) Concurrent Complete Cleanup 0.017ms
+[13.377s][info][gc,marking    ] GC(16) Concurrent Cleanup for Next Mark
+[13.377s][info][gc,marking    ] GC(16) Concurrent Cleanup for Next Mark 0.147ms
+[13.377s][info][gc            ] GC(16) Concurrent Cycle 44.834ms
+[13.526s][info][gc,start      ] GC(17) Pause Young (G1 Evacuation Pause)
+[13.526s][info][gc,task       ] GC(17) Using 8 workers of 8 for evacuation
+[13.530s][info][gc,phases     ] GC(17)   Evacuate Collection Set: 2.6ms
+[13.530s][info][gc,phases     ] GC(17)   Code Roots: 0.0ms
+[13.530s][info][gc,phases     ] GC(17)   String Dedup Fixup: 0.4ms
+[13.530s][info][gc,phases     ] GC(17)   Clear Card Table: 0.0ms
+[13.530s][info][gc,phases     ] GC(17)   Expand Heap After Collection: 0.0ms
+[13.530s][info][gc,phases     ] GC(17)   Free Collection Set: 0.0ms
+[13.530s][info][gc,phases     ] GC(17)   Merge Per-Thread State: 0.0ms
+[13.530s][info][gc,phases     ] GC(17)   Other: 1.1ms
+[13.530s][info][gc,heap       ] GC(17) Eden regions: 10->0(1)
+[13.530s][info][gc,heap       ] GC(17) Survivor regions: 2->2(2)
+[13.530s][info][gc,heap       ] GC(17) Old regions: 33->36
+[13.530s][info][gc,heap       ] GC(17) Humongous regions: 0->0
+[13.530s][info][gc,metaspace  ] GC(17) Metaspace: 46207K->46207K(1093632K)
+[13.530s][info][gc            ] GC(17) Pause Young (G1 Evacuation Pause) 44M->37M(64M) 4.241ms
+[13.530s][info][gc,cpu        ] GC(17) User=0.03s Sys=0.00s Real=0.00s
+[13.530s][info][gc,stringdedup] Concurrent String Deduplication (13.530s)
+[13.532s][info][gc,stringdedup] Concurrent String Deduplication 339.5K->135.2K(204.3K) avg 37.4% (13.530s, 13.532s) 1.872ms
+[13.542s][info][gc,start      ] GC(18) Pause Mixed (G1 Evacuation Pause)
+[13.542s][info][gc,task       ] GC(18) Using 8 workers of 8 for evacuation
+[13.546s][info][gc,phases     ] GC(18)   Evacuate Collection Set: 3.7ms
+[13.546s][info][gc,phases     ] GC(18)   Code Roots: 0.0ms
+[13.546s][info][gc,phases     ] GC(18)   String Dedup Fixup: 0.4ms
+[13.546s][info][gc,phases     ] GC(18)   Clear Card Table: 0.0ms
+[13.546s][info][gc,phases     ] GC(18)   Expand Heap After Collection: 0.2ms
+[13.546s][info][gc,phases     ] GC(18)   Free Collection Set: 0.0ms
+[13.546s][info][gc,phases     ] GC(18)   Merge Per-Thread State: 0.0ms
+[13.546s][info][gc,phases     ] GC(18)   Other: 0.3ms
+[13.546s][info][gc,heap       ] GC(18) Eden regions: 1->0(19)
+[13.546s][info][gc,heap       ] GC(18) Survivor regions: 2->1(1)
+[13.546s][info][gc,heap       ] GC(18) Old regions: 36->34
+[13.546s][info][gc,heap       ] GC(18) Humongous regions: 0->0
+[13.546s][info][gc,metaspace  ] GC(18) Metaspace: 46227K->46227K(1093632K)
+[13.546s][info][gc            ] GC(18) Pause Mixed (G1 Evacuation Pause) 38M->33M(80M) 4.661ms
+[13.546s][info][gc,cpu        ] GC(18) User=0.03s Sys=0.00s Real=0.01s
+[13.546s][info][gc,stringdedup] Concurrent String Deduplication (13.546s)
+[13.547s][info][gc,stringdedup] Concurrent String Deduplication 39.0K->13.2K(25.7K) avg 38.0% (13.546s, 13.547s) 0.425ms
+[13.780s][info][gc,start      ] GC(19) Pause Young (G1 Evacuation Pause)
+[13.780s][info][gc,task       ] GC(19) Using 8 workers of 8 for evacuation
+[13.787s][info][gc,phases     ] GC(19)   Evacuate Collection Set: 4.8ms
+[13.787s][info][gc,phases     ] GC(19)   Code Roots: 0.0ms
+[13.787s][info][gc,phases     ] GC(19)   String Dedup Fixup: 0.5ms
+[13.787s][info][gc,phases     ] GC(19)   Clear Card Table: 0.0ms
+[13.787s][info][gc,phases     ] GC(19)   Expand Heap After Collection: 0.0ms
+[13.787s][info][gc,phases     ] GC(19)   Free Collection Set: 0.0ms
+[13.787s][info][gc,phases     ] GC(19)   Merge Per-Thread State: 0.0ms
+[13.787s][info][gc,phases     ] GC(19)   Other: 1.6ms
+[13.787s][info][gc,heap       ] GC(19) Eden regions: 19->0(17)
+[13.787s][info][gc,heap       ] GC(19) Survivor regions: 1->3(3)
+[13.787s][info][gc,heap       ] GC(19) Old regions: 34->37
+[13.787s][info][gc,heap       ] GC(19) Humongous regions: 0->0
+[13.787s][info][gc,metaspace  ] GC(19) Metaspace: 50462K->50462K(1097728K)
+[13.787s][info][gc            ] GC(19) Pause Young (G1 Evacuation Pause) 52M->39M(80M) 7.055ms
+[13.787s][info][gc,cpu        ] GC(19) User=0.05s Sys=0.00s Real=0.01s
+[13.788s][info][gc,stringdedup] Concurrent String Deduplication (13.788s)
+[13.788s][info][gc,stringdedup] Concurrent String Deduplication 3400.0B->288.0B(3112.0B) avg 38.1% (13.788s, 13.788s) 0.034ms
+[13.992s][info][gc,start      ] GC(20) Pause Young (G1 Evacuation Pause)
+[13.992s][info][gc,task       ] GC(20) Using 8 workers of 8 for evacuation
+[14.000s][info][gc,phases     ] GC(20)   Evacuate Collection Set: 5.0ms
+[14.000s][info][gc,phases     ] GC(20)   Code Roots: 0.0ms
+[14.000s][info][gc,phases     ] GC(20)   String Dedup Fixup: 0.8ms
+[14.000s][info][gc,phases     ] GC(20)   Clear Card Table: 0.0ms
+[14.000s][info][gc,phases     ] GC(20)   Expand Heap After Collection: 0.0ms
+[14.000s][info][gc,phases     ] GC(20)   Free Collection Set: 0.1ms
+[14.000s][info][gc,phases     ] GC(20)   Merge Per-Thread State: 0.0ms
+[14.000s][info][gc,phases     ] GC(20)   Other: 1.9ms
+[14.000s][info][gc,heap       ] GC(20) Eden regions: 17->0(15)
+[14.000s][info][gc,heap       ] GC(20) Survivor regions: 3->3(3)
+[14.000s][info][gc,heap       ] GC(20) Old regions: 37->42
+[14.000s][info][gc,heap       ] GC(20) Humongous regions: 0->0
+[14.000s][info][gc,metaspace  ] GC(20) Metaspace: 53918K->53918K(1101824K)
+[14.000s][info][gc            ] GC(20) Pause Young (G1 Evacuation Pause) 56M->44M(80M) 7.901ms
+[14.000s][info][gc,cpu        ] GC(20) User=0.05s Sys=0.00s Real=0.01s
+[14.000s][info][gc,stringdedup] Concurrent String Deduplication (14.000s)
+[14.003s][info][gc,stringdedup] Concurrent String Deduplication 342.4K->87.5K(254.9K) avg 44.0% (14.000s, 14.003s) 2.824ms
+[14.111s][info][gc,start      ] GC(21) Pause Young (G1 Evacuation Pause)
+[14.111s][info][gc,task       ] GC(21) Using 8 workers of 8 for evacuation
+[14.118s][info][gc,phases     ] GC(21)   Evacuate Collection Set: 6.3ms
+[14.118s][info][gc,phases     ] GC(21)   Code Roots: 0.0ms
+[14.118s][info][gc,phases     ] GC(21)   String Dedup Fixup: 0.6ms
+[14.118s][info][gc,phases     ] GC(21)   Clear Card Table: 0.0ms
+[14.118s][info][gc,phases     ] GC(21)   Expand Heap After Collection: 0.0ms
+[14.118s][info][gc,phases     ] GC(21)   Free Collection Set: 0.0ms
+[14.118s][info][gc,phases     ] GC(21)   Merge Per-Thread State: 0.0ms
+[14.118s][info][gc,phases     ] GC(21)   Other: 0.3ms
+[14.118s][info][gc,heap       ] GC(21) Eden regions: 15->0(16)
+[14.118s][info][gc,heap       ] GC(21) Survivor regions: 3->1(3)
+[14.118s][info][gc,heap       ] GC(21) Old regions: 42->44
+[14.118s][info][gc,heap       ] GC(21) Humongous regions: 0->0
+[14.118s][info][gc,metaspace  ] GC(21) Metaspace: 54103K->54103K(1101824K)
+[14.118s][info][gc            ] GC(21) Pause Young (G1 Evacuation Pause) 59M->44M(80M) 7.392ms
+[14.118s][info][gc,cpu        ] GC(21) User=0.06s Sys=0.00s Real=0.01s
+[14.118s][info][gc,stringdedup] Concurrent String Deduplication (14.118s)
+[14.119s][info][gc,stringdedup] Concurrent String Deduplication 118.2K->88.2K(30.0K) avg 43.0% (14.118s, 14.119s) 0.964ms
+[20.097s][info][gc,heap,exit  ] Heap
+[20.097s][info][gc,heap,exit  ]  garbage-first heap   total 81920K, used 54069K [0x00000007a0000000, 0x00000007a0100280, 0x00000007c0000000)
+[20.097s][info][gc,heap,exit  ]   region size 1024K, 10 young (10240K), 1 survivors (1024K)
+[20.097s][info][gc,heap,exit  ]  Metaspace       used 54594K, capacity 61070K, committed 61312K, reserved 1101824K
+[20.097s][info][gc,heap,exit  ]   class space    used 6920K, capacity 8772K, committed 8832K, reserved 1048576K

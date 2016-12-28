@@ -17,7 +17,17 @@ public final class StringDeduplicationParser {
 
   private static final Logger LOG = Logger.getLogger(MethodHandles.lookup().lookupClass().getName());
 
-  private static final String MARKER = "[GC concurrent-string-deduplication, ";
+  private static final String MARKER_JDK8 = "[GC concurrent-string-deduplication, ";
+
+  private static final String MARKER_JDK9 = "Concurrent String Deduplication ";
+
+  enum ParseMode {
+    JDK8,
+    JDK9,
+    UNKNOWN;
+  }
+
+  private ParseMode parseMode;
 
   public ParseResult parse(Path path, Charset charset) throws IOException {
     LineParser parser = new LineParser();
@@ -46,13 +56,39 @@ public final class StringDeduplicationParser {
 
   }
 
+  StringDeduplicationParser () {
+    this.parseMode = ParseMode.UNKNOWN;
+  }
+
   private long parseLine(Line line, Aggregator aggregator) {
+    switch (this.parseMode) {
+      case JDK8:
+        return parseLine8(line, aggregator);
+      case JDK9:
+        return parseLine9(line, aggregator);
+      case UNKNOWN:
+        CharSequence content = line.getContent();
+        int index8 = indexOf(content, MARKER_JDK8);
+        if (index8 != -1) {
+          this.parseMode = ParseMode.JDK8;
+          return parseLine8(line, aggregator);
+        }
+        int index9 = indexOf(content, MARKER_JDK9);
+        if (index9 != -1) {
+          this.parseMode = ParseMode.JDK9;
+          return parseLine8(line, aggregator);
+        }
+    }
+    return 0L;
+  }
+
+  private static long parseLine8(Line line, Aggregator aggregator) {
     CharSequence content = line.getContent();
-    int deduplicationIndex = indexOf(content, MARKER);
+    int deduplicationIndex = indexOf(content, MARKER_JDK8);
     if (deduplicationIndex != -1) {
       int closingIndex = lastIndexOf(content, ']');
       if (closingIndex > deduplicationIndex) {
-        CharSequence dedup = content.subSequence(deduplicationIndex + MARKER.length(), closingIndex);
+        CharSequence dedup = content.subSequence(deduplicationIndex + MARKER_JDK8.length(), closingIndex);
         CharSequence saved = betweenAnd(dedup, '(', ')');
         if (saved != null) {
           long memory = parseMemory(saved);
@@ -62,6 +98,26 @@ public final class StringDeduplicationParser {
         }
       } else {
         LOG.warning("could not find ']' on line: "  + content);
+      }
+    }
+    return 0L;
+  }
+
+  private static long parseLine9(Line line, Aggregator aggregator) {
+    CharSequence content = line.getContent();
+    int deduplicationIndex = indexOf(content, MARKER_JDK9);
+    if (deduplicationIndex != -1) {
+      int openingIndex = indexOf(content, deduplicationIndex + MARKER_JDK9.length() + 1, '(');
+      if (openingIndex != -1) {
+        int closingIndex = indexOf(content, openingIndex + 1, ')');
+        if (closingIndex != -1) {
+          CharSequence saved = content.subSequence(openingIndex + 1, closingIndex);
+          long memory = parseMemory(saved);
+          aggregator.add(memory);
+        } else {
+          LOG.warning("could not find ')' on line: "  + content);
+        }
+
       }
     }
     return 0L;
@@ -112,6 +168,19 @@ public final class StringDeduplicationParser {
   static int indexOf(CharSequence charSequence, char c) {
     int length = charSequence.length();
     for (int i = 0; i < length; ++i) {
+      if (charSequence.charAt(i) == c) {
+        return i;
+      }
+    }
+    return -1;
+  }
+
+  static int indexOf(CharSequence charSequence, int start, char c) {
+    int length = charSequence.length();
+    if (start >= length) {
+      throw new IllegalArgumentException();
+    }
+    for (int i = start; i < length; ++i) {
       if (charSequence.charAt(i) == c) {
         return i;
       }
