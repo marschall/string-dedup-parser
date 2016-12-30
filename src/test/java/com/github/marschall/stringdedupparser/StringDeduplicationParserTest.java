@@ -61,13 +61,13 @@ public class StringDeduplicationParserTest {
   }
 
   @Test
-  public void betweenAnd() {
-    assertEquals("20.5K", StringDeduplicationParser.betweenAnd("116.9K->96.4K(20.5K), avg 17.5%, 0.0018690 secs", '(', ')'));
-    assertEquals("", StringDeduplicationParser.betweenAnd("116.9K->96.4K(), avg 17.5%, 0.0018690 secs", '(', ')'));
-    assertNull("20.5K", StringDeduplicationParser.betweenAnd("116.9K->96.4K)(, avg 17.5%, 0.0018690 secs", '(', ')'));
+  public void subSequenceBetween() {
+    assertEquals("20.5K", StringDeduplicationParser.subSequenceBetween("116.9K->96.4K(20.5K), avg 17.5%, 0.0018690 secs", '(', ')'));
+    assertEquals("", StringDeduplicationParser.subSequenceBetween("116.9K->96.4K(), avg 17.5%, 0.0018690 secs", '(', ')'));
+    assertNull("20.5K", StringDeduplicationParser.subSequenceBetween("116.9K->96.4K)(, avg 17.5%, 0.0018690 secs", '(', ')'));
 
-    assertNull(StringDeduplicationParser.betweenAnd("116.9K->96.4K(20.5K", '(', ')'));
-    assertNull(StringDeduplicationParser.betweenAnd("20.5K), avg 17.5%, 0.0018690 secs", '(', ')'));
+    assertNull(StringDeduplicationParser.subSequenceBetween("116.9K->96.4K(20.5K", '(', ')'));
+    assertNull(StringDeduplicationParser.subSequenceBetween("20.5K), avg 17.5%, 0.0018690 secs", '(', ')'));
   }
 
   @Test

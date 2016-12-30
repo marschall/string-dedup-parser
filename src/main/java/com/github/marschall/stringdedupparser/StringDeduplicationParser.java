@@ -89,7 +89,7 @@ public final class StringDeduplicationParser {
       int closingIndex = lastIndexOf(content, ']');
       if (closingIndex > deduplicationIndex) {
         CharSequence dedup = content.subSequence(deduplicationIndex + MARKER_JDK8.length(), closingIndex);
-        CharSequence saved = betweenAnd(dedup, '(', ')');
+        CharSequence saved = subSequenceBetween(dedup, '(', ')');
         if (saved != null) {
           long memory = parseMemory(saved);
           aggregator.add(memory);
@@ -154,7 +154,7 @@ public final class StringDeduplicationParser {
     }
   }
 
-  static CharSequence betweenAnd(CharSequence charSequence, char start, char end) {
+  static CharSequence subSequenceBetween(CharSequence charSequence, char start, char end) {
     int startIndex = indexOf(charSequence, start);
     if (startIndex != -1) {
       int endIndex = lastIndexOf(charSequence, end);
