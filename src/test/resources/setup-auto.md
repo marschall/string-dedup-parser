@@ -1,0 +1,1 @@
+-Xmx4m -Xms4m -XX:+UseStringDeduplication -XX:+UseG1GC -XX:+PrintGC -XX:+PrintGCDetails -Xloggc:auto.log
