@@ -2,7 +2,6 @@ package com.github.marschall.stringdedupparser;
 
 import java.io.IOException;
 import java.lang.invoke.MethodHandles;
-import java.math.BigDecimal;
 import java.nio.charset.Charset;
 import java.nio.file.Path;
 import java.util.logging.Logger;
@@ -129,9 +128,35 @@ public final class StringDeduplicationParser {
     if (length < 2) {
       LOG.warning("memory too short: " + charSequence);
     }
-    BigDecimal memory = new BigDecimal(charSequence.subSequence(0, length - 1).toString());
     int multiplier = extractMemoryMultiplier(charSequence);
-    return memory.multiply(BigDecimal.valueOf(multiplier)).longValue();
+    long memory = 0L;
+    for (int i = 0; i < length - 1; ++i) {
+      char c = charSequence.charAt(i);
+      if (c == '.') {
+        // 12.345
+        // 300 000
+        //  40 000
+        //   5 000
+        memory = memory * multiplier;
+        int minorMultiplier = multiplier / 1024 * 100;
+        for (int j = i + 1; j < length - 1; ++j) {
+          char decimalChar = charSequence.charAt(j);
+          if (decimalChar < '0' || decimalChar > '9') {
+            throw new NumberFormatException(charSequence.toString());
+          }
+          int decimalValue = decimalChar - '0';
+          memory += decimalValue * minorMultiplier;
+          minorMultiplier /= 10;
+        }
+        return memory;
+      }
+      if (c < '0' || c > '9') {
+        throw new NumberFormatException(charSequence.toString());
+      }
+      int value = c - '0';
+      memory = memory * 10 + value;
+    }
+    return memory * multiplier;
   }
 
   private static int extractMemoryMultiplier(CharSequence charSequence) {

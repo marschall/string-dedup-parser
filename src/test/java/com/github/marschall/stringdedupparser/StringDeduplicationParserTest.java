@@ -27,7 +27,7 @@ public class StringDeduplicationParserTest {
     ParseResult result = this.parser.parse(path, StandardCharsets.US_ASCII);
     assertNotNull(result);
     assertEquals(148L, result.getCount());
-    assertEquals(169929993L, result.getSaved());
+    assertEquals(169928456L, result.getSaved());
   }
 
   @Test
@@ -36,7 +36,7 @@ public class StringDeduplicationParserTest {
     ParseResult result = this.parser.parse(path, StandardCharsets.US_ASCII);
     assertNotNull(result);
     assertEquals(19L, result.getCount());
-    assertEquals(981047L, result.getSaved());
+    assertEquals(980892L, result.getSaved());
   }
 
   @Test
@@ -51,7 +51,11 @@ public class StringDeduplicationParserTest {
 
   @Test
   public void parseMemory() {
-    assertEquals((long) (20.5d * 1024), StringDeduplicationParser.parseMemory("20.5K"));
+    assertEquals(1L, StringDeduplicationParser.parseMemory("1B"));
+    assertEquals(1024L, StringDeduplicationParser.parseMemory("1K"));
+    assertEquals((1024 * 1024) + (1024 * 100), StringDeduplicationParser.parseMemory("1.1M"));
+    assertEquals((1024 * 1024) + (1024 * 230), StringDeduplicationParser.parseMemory("1.23M"));
+    assertEquals((20 * 1024) + 500, StringDeduplicationParser.parseMemory("20.5K"));
     assertEquals(4808, StringDeduplicationParser.parseMemory("4808.0B"));
     assertEquals(11 * 1024 * 1024, StringDeduplicationParser.parseMemory("11.0M"));
   }

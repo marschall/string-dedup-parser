@@ -6,10 +6,12 @@ A parser for HotSpot string deduplication logs. Tested with JDK 8 and JDK 9.
 Usage
 -----
 
+Download [line-parser-0.2.0.jar](http://search.maven.org/remotecontent?filepath=com/github/marschall/line-parser/0.2.0/line-parser-0.2.0.jar)
+
 Run the JAR with log file to parse as the first command line argument
 
 ```
-java -jar target/string-dedup-parser-0.1.0-SNAPSHOT.jar src/test/resources/middleware.log
+java -jar string-dedup-parser-0.2.0.jar src/test/resources/middleware.log
 ```
 
 the output will look something like this
