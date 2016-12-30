@@ -40,27 +40,6 @@ public class StringDeduplicationParserTest {
   }
 
   @Test
-  public void indexOf() {
-    assertEquals(-1, StringDeduplicationParser.indexOf("abcd", "abcde"));
-    assertEquals(-1, StringDeduplicationParser.indexOf("abcd", "bcde"));
-    assertEquals(2, StringDeduplicationParser.indexOf("aaab", "ab"));
-  }
-
-  @Test
-  public void indexOfChar() {
-    assertEquals(2, StringDeduplicationParser.indexOf("aab", 'b'));
-    assertEquals(0, StringDeduplicationParser.indexOf("baa", 'b'));
-    assertEquals(-1, StringDeduplicationParser.indexOf("aaa", 'b'));
-  }
-
-  @Test
-  public void lastIndexOf() {
-    assertEquals(-1, StringDeduplicationParser.lastIndexOf("aaa", 'b'));
-    assertEquals(0, StringDeduplicationParser.lastIndexOf("baa", 'b'));
-    assertEquals(2, StringDeduplicationParser.lastIndexOf("aab", 'b'));
-  }
-
-  @Test
   public void subSequenceBetween() {
     assertEquals("20.5K", StringDeduplicationParser.subSequenceBetween("116.9K->96.4K(20.5K), avg 17.5%, 0.0018690 secs", '(', ')'));
     assertEquals("", StringDeduplicationParser.subSequenceBetween("116.9K->96.4K(), avg 17.5%, 0.0018690 secs", '(', ')'));

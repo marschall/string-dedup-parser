@@ -7,6 +7,7 @@ import java.nio.charset.Charset;
 import java.nio.file.Path;
 import java.util.logging.Logger;
 
+import com.github.marschall.charsequences.CharSequences;
 import com.github.marschall.lineparser.Line;
 import com.github.marschall.lineparser.LineParser;
 
@@ -68,12 +69,12 @@ public final class StringDeduplicationParser {
         return parseLine9(line, aggregator);
       case UNKNOWN:
         CharSequence content = line.getContent();
-        int index8 = indexOf(content, MARKER_JDK8);
+        int index8 = CharSequences.indexOf(content, MARKER_JDK8);
         if (index8 != -1) {
           this.parseMode = ParseMode.JDK8;
           return parseLine8(line, aggregator);
         }
-        int index9 = indexOf(content, MARKER_JDK9);
+        int index9 = CharSequences.indexOf(content, MARKER_JDK9);
         if (index9 != -1) {
           this.parseMode = ParseMode.JDK9;
           return parseLine8(line, aggregator);
@@ -84,9 +85,9 @@ public final class StringDeduplicationParser {
 
   private static long parseLine8(Line line, Aggregator aggregator) {
     CharSequence content = line.getContent();
-    int deduplicationIndex = indexOf(content, MARKER_JDK8);
+    int deduplicationIndex = CharSequences.indexOf(content, MARKER_JDK8);
     if (deduplicationIndex != -1) {
-      int closingIndex = lastIndexOf(content, ']');
+      int closingIndex = CharSequences.lastIndexOf(content, ']');
       if (closingIndex > deduplicationIndex) {
         CharSequence dedup = content.subSequence(deduplicationIndex + MARKER_JDK8.length(), closingIndex);
         CharSequence saved = subSequenceBetween(dedup, '(', ')');
@@ -105,11 +106,11 @@ public final class StringDeduplicationParser {
 
   private static long parseLine9(Line line, Aggregator aggregator) {
     CharSequence content = line.getContent();
-    int deduplicationIndex = indexOf(content, MARKER_JDK9);
+    int deduplicationIndex = CharSequences.indexOf(content, MARKER_JDK9);
     if (deduplicationIndex != -1) {
-      int openingIndex = indexOf(content, deduplicationIndex + MARKER_JDK9.length() + 1, '(');
+      int openingIndex = CharSequences.indexOf(content, '(', deduplicationIndex + MARKER_JDK9.length() + 1);
       if (openingIndex != -1) {
-        int closingIndex = indexOf(content, openingIndex + 1, ')');
+        int closingIndex = CharSequences.indexOf(content, ')', openingIndex + 1);
         if (closingIndex != -1) {
           CharSequence saved = content.subSequence(openingIndex + 1, closingIndex);
           long memory = parseMemory(saved);
@@ -155,61 +156,14 @@ public final class StringDeduplicationParser {
   }
 
   static CharSequence subSequenceBetween(CharSequence charSequence, char start, char end) {
-    int startIndex = indexOf(charSequence, start);
+    int startIndex = CharSequences.indexOf(charSequence, start);
     if (startIndex != -1) {
-      int endIndex = lastIndexOf(charSequence, end);
+      int endIndex = CharSequences.lastIndexOf(charSequence, end);
       if (endIndex > startIndex) {
         return charSequence.subSequence(startIndex + 1, endIndex);
       }
     }
     return null;
-  }
-
-  static int indexOf(CharSequence charSequence, char c) {
-    int length = charSequence.length();
-    for (int i = 0; i < length; ++i) {
-      if (charSequence.charAt(i) == c) {
-        return i;
-      }
-    }
-    return -1;
-  }
-
-  static int indexOf(CharSequence charSequence, int start, char c) {
-    int length = charSequence.length();
-    if (start >= length) {
-      throw new IllegalArgumentException();
-    }
-    for (int i = start; i < length; ++i) {
-      if (charSequence.charAt(i) == c) {
-        return i;
-      }
-    }
-    return -1;
-  }
-
-  static int lastIndexOf(CharSequence charSequence, char c) {
-    int length = charSequence.length();
-    for (int i = length - 1; i >= 0; --i) {
-      if (charSequence.charAt(i) == c) {
-        return i;
-      }
-    }
-    return -1;
-  }
-
-  static int indexOf(CharSequence charSequence, String subSequence) {
-    int sequenceLength = charSequence.length();
-    int subSequenceLength = subSequence.length();
-    charLoop : for (int i = 0; i <= sequenceLength - subSequenceLength; ++i) {
-      for (int j = 0; j < subSequenceLength; ++j) {
-        if (charSequence.charAt(i + j) != subSequence.charAt(j)) {
-          continue charLoop;
-        }
-      }
-      return i;
-    }
-    return -1;
   }
 
 }
