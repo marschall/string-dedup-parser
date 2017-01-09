@@ -126,7 +126,7 @@ public final class StringDeduplicationParser {
   static long parseMemory(CharSequence charSequence) {
     int length = charSequence.length();
     if (length < 2) {
-      LOG.warning("memory too short: " + charSequence);
+      return unparsableMemory(charSequence);
     }
     int multiplier = extractMemoryMultiplier(charSequence);
     long memory = 0L;
@@ -142,7 +142,7 @@ public final class StringDeduplicationParser {
         for (int j = i + 1; j < length - 1; ++j) {
           char decimalChar = charSequence.charAt(j);
           if (decimalChar < '0' || decimalChar > '9') {
-            throw new NumberFormatException(charSequence.toString());
+            return unparsableMemory(charSequence);
           }
           int decimalValue = decimalChar - '0';
           memory += decimalValue * minorMultiplier;
@@ -151,12 +151,17 @@ public final class StringDeduplicationParser {
         return memory;
       }
       if (c < '0' || c > '9') {
-        throw new NumberFormatException(charSequence.toString());
+        return unparsableMemory(charSequence);
       }
       int value = c - '0';
       memory = memory * 10 + value;
     }
     return memory * multiplier;
+  }
+
+  private static long unparsableMemory(CharSequence charSequence) {
+    LOG.warning("unparsable memory: " + charSequence);
+    return -1L;
   }
 
   private static int extractMemoryMultiplier(CharSequence charSequence) {
