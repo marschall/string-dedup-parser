@@ -40,6 +40,16 @@ public class StringDeduplicationParserTest {
   }
 
   @Test
+  public void parseZeroDeduplicationLog() throws IOException {
+    Path path = Paths.get("src", "test", "resources", "with-zero-deduplication.log");
+    ParseResult result = this.parser.parse(path, StandardCharsets.US_ASCII);
+
+    assertNotNull(result);
+    assertEquals(3L, result.getCount());
+    assertEquals(92160L, result.getSaved());
+  }
+
+  @Test
   public void subSequenceBetween() {
     assertEquals("20.5K", StringDeduplicationParser.subSequenceBetween("116.9K->96.4K(20.5K), avg 17.5%, 0.0018690 secs", '(', ')'));
     assertEquals("", StringDeduplicationParser.subSequenceBetween("116.9K->96.4K(), avg 17.5%, 0.0018690 secs", '(', ')'));
@@ -59,5 +69,4 @@ public class StringDeduplicationParserTest {
     assertEquals(4808, StringDeduplicationParser.parseMemory("4808.0B"));
     assertEquals(11 * 1024 * 1024, StringDeduplicationParser.parseMemory("11.0M"));
   }
-
 }

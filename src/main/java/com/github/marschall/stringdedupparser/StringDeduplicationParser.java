@@ -44,7 +44,7 @@ public final class StringDeduplicationParser {
     private int count;
 
     void add(long l) {
-      if (l > 0L) {
+      if (l >= 0L) {
         saved += l;
         count += 1;
       }
