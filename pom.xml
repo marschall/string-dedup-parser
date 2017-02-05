@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.github.marschall</groupId>
   <artifactId>string-dedup-parser</artifactId>
-  <version>0.2.3-SNPSHOT</version>
+  <version>0.2.3-SNAPSHOT</version>
   <inceptionYear>2016</inceptionYear>
   <name>String Deduplication Log Parser</name>
   <description>Parses HotSpot string deduplication logs.</description>
