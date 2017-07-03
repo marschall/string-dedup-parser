@@ -1,7 +1,5 @@
 package com.github.marschall.stringdedupparser;
 
-import java.text.DecimalFormat;
-
 /**
  * The result of parsing a string deduplication log.
  */
@@ -57,7 +55,16 @@ public final class ParseResult {
       unit = 'T';
       value = bytes / (1024.0d * 1024.0d * 1024.0d * 1024.0d);
     }
-    return new DecimalFormat("0.0").format(value) + unit;
+
+    // simple 0.0 decimal formatting
+    long integerPart = (long) value;
+    long fractionalPart = ((long) Math.round(value * 10.0d)) % 10l;
+    StringBuilder buffer = new StringBuilder(7);
+    buffer.append(integerPart);
+    buffer.append('.');
+    buffer.append(fractionalPart);
+    buffer.append(unit);
+    return buffer.toString();
   }
 
 }

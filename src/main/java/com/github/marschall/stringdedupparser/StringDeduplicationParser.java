@@ -1,10 +1,8 @@
 package com.github.marschall.stringdedupparser;
 
 import java.io.IOException;
-import java.lang.invoke.MethodHandles;
 import java.nio.charset.Charset;
 import java.nio.file.Path;
-import java.util.logging.Logger;
 
 import com.github.marschall.charsequences.CharSequences;
 import com.github.marschall.lineparser.Line;
@@ -14,8 +12,6 @@ import com.github.marschall.lineparser.LineParser;
  * Parses a string deduplication log.
  */
 public final class StringDeduplicationParser {
-
-  private static final Logger LOG = Logger.getLogger(MethodHandles.lookup().lookupClass().getName());
 
   private static final String MARKER_JDK8 = "[GC concurrent-string-deduplication, ";
 
@@ -94,10 +90,10 @@ public final class StringDeduplicationParser {
           long memory = parseMemory(saved);
           aggregator.add(memory);
         } else {
-          LOG.warning("could not find saved memory on line: "  + content);
+          warning("could not find saved memory on line: "  + content);
         }
       } else {
-        LOG.warning("could not find ']' on line: "  + content);
+        warning("could not find ']' on line: "  + content);
       }
     }
     return 0L;
@@ -115,7 +111,7 @@ public final class StringDeduplicationParser {
           long memory = parseMemory(saved);
           aggregator.add(memory);
         } else {
-          LOG.warning("could not find ')' on line: "  + content);
+          warning("could not find ')' on line: "  + content);
         }
 
       }
@@ -160,13 +156,13 @@ public final class StringDeduplicationParser {
   }
 
   private static long unparsableMemory(CharSequence charSequence) {
-    LOG.warning("unparsable memory: " + charSequence);
+    warning("unparsable memory: " + charSequence);
     return -1L;
   }
 
   private static int extractMemoryMultiplier(CharSequence charSequence) {
     if (charSequence.length() == 0) {
-      LOG.warning("empty memory unit");
+      warning("empty memory unit");
       return 0;
     }
     char unit = charSequence.charAt(charSequence.length() - 1);
@@ -180,9 +176,14 @@ public final class StringDeduplicationParser {
       case 'G':
         return 1024 * 1024 * 1024;
       default:
-        LOG.warning("unknown unit: " + unit);
+        warning("unknown unit: " + unit);
         return 0;
     }
+  }
+
+  private static void warning(String message) {
+    // avoid java.util.logging dependency
+    System.err.println(message);
   }
 
   static CharSequence subSequenceBetween(CharSequence charSequence, char start, char end) {
