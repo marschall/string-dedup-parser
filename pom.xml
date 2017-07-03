@@ -1,10 +1,9 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.github.marschall</groupId>
   <artifactId>string-dedup-parser</artifactId>
-  <version>0.3.0-SNAPSHOT</version>
+  <version>0.3.0</version>
   <inceptionYear>2016</inceptionYear>
   <name>String Deduplication Log Parser</name>
   <description>Parses HotSpot string deduplication logs.</description>
@@ -15,7 +14,7 @@
     <connection>scm:git:git@github.com:marschall/string-dedup-parser.git</connection>
     <developerConnection>scm:git:git@github.com:marschall/string-dedup-parser.git</developerConnection>
     <url>${project.url}</url>
-    <tag>HEAD</tag>
+    <tag>0.3.0</tag>
   </scm>
 
   <developers>
@@ -119,8 +118,7 @@
         <artifactId>maven-shade-plugin</artifactId>
         <configuration>
           <transformers>
-            <transformer
-              implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+            <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
               <manifestEntries>
                 <Main-Class>com.github.marschall.stringdedupparser.Main</Main-Class>
               </manifestEntries>
