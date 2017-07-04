@@ -6,12 +6,12 @@ A parser for [HotSpot string deduplication](http://openjdk.java.net/jeps/192) lo
 Usage
 -----
 
-Download [string-dedup-parser-0.2.3.jar](https://search.maven.org/remotecontent?filepath=com/github/marschall/string-dedup-parser/0.2.3/string-dedup-parser-0.2.3.jar)
+Download [string-dedup-parser-0.3.0-shaded.jar](http://search.maven.org/remotecontent?filepath=com/github/marschall/string-dedup-parser/0.3.0/string-dedup-parser-0.3.0-shaded.jar)
 
 Run the JAR with log file to parse as the first command line argument
 
 ```
-java -jar string-dedup-parser-0.2.3.jar src/test/resources/middleware.log
+java -jar string-dedup-parser-0.3.0-shaded.jar src/test/resources/middleware.log
 ```
 
 the output will look something like this
