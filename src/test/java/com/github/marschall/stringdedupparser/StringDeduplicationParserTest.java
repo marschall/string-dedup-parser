@@ -1,22 +1,22 @@
 package com.github.marschall.stringdedupparser;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class StringDeduplicationParserTest {
 
   private StringDeduplicationParser parser;
 
-  @Before
+  @BeforeEach
   public void setUp() {
     this.parser = new StringDeduplicationParser();
   }
@@ -53,7 +53,7 @@ public class StringDeduplicationParserTest {
   public void subSequenceBetween() {
     assertEquals("20.5K", StringDeduplicationParser.subSequenceBetween("116.9K->96.4K(20.5K), avg 17.5%, 0.0018690 secs", '(', ')'));
     assertEquals("", StringDeduplicationParser.subSequenceBetween("116.9K->96.4K(), avg 17.5%, 0.0018690 secs", '(', ')'));
-    assertNull("20.5K", StringDeduplicationParser.subSequenceBetween("116.9K->96.4K)(, avg 17.5%, 0.0018690 secs", '(', ')'));
+    assertNull(StringDeduplicationParser.subSequenceBetween("116.9K->96.4K)(, avg 17.5%, 0.0018690 secs", '(', ')'), "20.5K");
 
     assertNull(StringDeduplicationParser.subSequenceBetween("116.9K->96.4K(20.5K", '(', ')'));
     assertNull(StringDeduplicationParser.subSequenceBetween("20.5K), avg 17.5%, 0.0018690 secs", '(', ')'));
