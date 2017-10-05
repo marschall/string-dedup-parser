@@ -141,6 +141,15 @@
       <plugin>
         <artifactId>maven-shade-plugin</artifactId>
         <configuration>
+          <filters>
+            <filter>
+              <artifact>*:*</artifact>
+              <excludes>
+                <exclude>module-info.class</exclude>
+                <exclude>META-INF/jandex.idx</exclude>
+              </excludes>
+            </filter>
+          </filters>
           <transformers>
             <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
               <manifestEntries>
